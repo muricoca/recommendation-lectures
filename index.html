@@ -1,88 +1,177 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset='utf-8'>
 
-  <title>muricoca/recommendation-lectures @ GitHub</title>
 
-  <style type="text/css">
-    body {
-      margin-top: 1.0em;
-      background-color: #29ef98;
-      font-family: Helvetica, Arial, FreeSans, san-serif;
-      color: #000000;
-    }
-    #container {
-      margin: 0 auto;
-      width: 700px;
-    }
-    h1 { font-size: 3.8em; color: #d61067; margin-bottom: 3px; }
-    h1 .small { font-size: 0.4em; }
-    h1 a { text-decoration: none }
-    h2 { font-size: 1.5em; color: #d61067; }
-    h3 { text-align: center; color: #d61067; }
-    a { color: #d61067; }
-    .description { font-size: 1.2em; margin-bottom: 30px; margin-top: 30px; font-style: italic;}
-    .download { float: right; }
-    pre { background: #000; color: #fff; padding: 15px;}
-    hr { border: 0; width: 80%; border-bottom: 1px solid #aaa}
-    .footer { text-align:center; padding-top:30px; font-style: italic; }
-  </style>
-</head>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
-<body>
-  <a href="https://github.com/muricoca/recommendation-lectures"><img style="position: absolute; top: 0; right: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub" /></a>
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Guide to Recommender Systems &mdash; Guide to Recommender Systems</title>
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '',
+        VERSION:     '2012.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="Guide to Recommender Systems" href="#" />
+    <link rel="next" title="Authors" href="AUTHORS.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="AUTHORS.html" title="Authors"
+             accesskey="N">next</a></li>
+        <li><a href="#">Guide to Recommender Systems</a> &raquo;</li> 
+      </ul>
+    </div>  
 
-  <div id="container">
+    <div class="document">
+      <div class="documentwrapper">
+          <div class="body">
+            
+  <div class="section" id="guide-to-recommender-systems">
+<h1>Guide to Recommender Systems<a class="headerlink" href="#guide-to-recommender-systems" title="Permalink to this headline">¶</a></h1>
+<style type="text/css">
+  div.documentwrapper h1 {
+      text-align: center;
+      font-size: 200% ;
+      font-weight: bold;
+  }
 
-    <div class="download">
-      <a href="https://github.com/muricoca/recommendation-lectures/zipball/master">
-        <img border="0" width="90" src="https://github.com/images/modules/download/zip.png"></a>
-      <a href="https://github.com/muricoca/recommendation-lectures/tarball/master">
-        <img border="0" width="90" src="https://github.com/images/modules/download/tar.png"></a>
+</style><style type="text/css">
+  div.bodywrapper blockquote {
+      margin: 0 ;
+  }
+
+  div.toctree-wrapper ul {
+      margin: 0 ;
+      padding-left: 0px ;
+  }
+
+  li.toctree-l1 {
+      padding: 0 ;
+      list-style-type: none;
+      font-size: 150% ;
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      font-weight: normal;
+      color: #20435c;
+      margin-left: 0;
+      margin-bottom: 1em;
+      font-weight: bold;
+      }
+
+  li.toctree-l1 a {
+      padding: 0 0 0 10px ;
+  }
+
+  li.toctree-l2 {
+      padding: 0.25em 0 0.25em 0 ;
+      list-style-type: none;
+      background-color: #FFFFFF;
+      font-size: 90% ;
+      font-weight: bold;
+  }
+
+  li.toctree-l2 ul {
+      padding-left: 40px ;
+  }
+
+  li.toctree-l3 {
+      font-size: 70% ;
+      list-style-type: square;
+      font-weight: normal;
+  }
+
+  li.toctree-l4 {
+      font-size: 85% ;
+      list-style-type: circle;
+      font-weight: normal;
+  }
+
+  div.topic li.toctree-l1 {
+      font-size: 100% ;
+      font-weight: bold;
+      background-color: transparent;
+      margin-bottom: 0;
+      margin-left: 3em;
+      display:inline;
+  }
+
+  div.topic p {
+      font-size: 90% ;
+      margin: 0.4ex;
+  }
+
+  div.topic p.topic-title {
+      display:inline;
+      font-size: 100% ;
+      margin-bottom: 0;
+  }
+
+</style><div class="sidebar">
+<p class="first sidebar-title">Download</p>
+<ul class="last simple">
+<li><a class="reference external" href="./_downloads/PythonScientific.pdf">PDF, 2 pages per side</a></li>
+<li><a class="reference external" href="./_downloads/PythonScientific-simple.pdf">PDF, 1 page per side</a></li>
+<li><a class="reference external" href="https://github.com/muricoca/recommendation-lectures.github.com/zipball/master">HTML and example files</a></li>
+<li><a class="reference external" href="https://github.com/muricoca/recommendation-lectures">Source code (github)</a></li>
+</ul>
+</div>
+<div class="topic">
+<p class="topic-title first">This document</p>
+<p>Teaching material on Recommender Systems using Python, this guide will introduce the main techniques and study cases. The different chapters each correspond to a 1 to 2 hours course with increasing level of expertise, from beginer to expert.</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="AUTHORS.html">Authors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="LICENSE.html">License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CHANGES.html">What&#8217;s new</a></li>
+</ul>
+</div>
+</div>
+<hr class="docutils" />
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="intro/index.html">1. Getting started with Recommender Systems</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="intro/intro.html">1.1. Starting with Recommender Systems</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<hr class="docutils" />
+<small><p>Version:  (output of <tt class="docutils literal"><span class="pre">git</span> <span class="pre">describe</span></tt> for <a class="reference external" href="https://github.com/muricoca/recommendation-lectures">project repository</a>)</p>
+<div style='visibility: hidden ; height=0'><p><tt class="xref download docutils literal"><span class="pre">RecSysTutorial.pdf</span></tt> <tt class="xref download docutils literal"><span class="pre">PythonScientific-simple.pdf</span></tt></p>
+</div>
+</small></div>
+
+
+          </div>
+      </div>
+      <div class="clearer"></div>
     </div>
-
-    <h1><a href="https://github.com/muricoca/recommendation-lectures">recommendation-lectures</a>
-      <span class="small">by <a href="https://github.com/muricoca">muricoca</a></span></h1>
-
-    <div class="description">
-      Guide to Recommender Systems
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="AUTHORS.html" title="Authors"
+             >next</a></li>
+        <li><a href="#">Guide to Recommender Systems</a> &raquo;</li> 
+      </ul>
     </div>
-
-    
-
-    
-
-    
-
-    
-
-    
-      <h2>Authors</h2>
-      <p>Marcel Caraciolo (caraciol@gmail.com)<br/>      </p>
-    
-
-    
-      <h2>Contact</h2>
-      <p>python-recsys (contato@muricoca.com)<br/>      </p>
-    
-
-    <h2>Download</h2>
-    <p>
-      You can download this project in either
-      <a href="https://github.com/muricoca/recommendation-lectures/zipball/master">zip</a> or
-      <a href="https://github.com/muricoca/recommendation-lectures/tarball/master">tar formats.
-    </p>
-    <p>You can also clone the project with <a href="http://git-scm.com">Git</a>
-      by running:
-      <pre>$ git clone git://github.com/muricoca/recommendation-lectures</pre>
-    </p>
-
     <div class="footer">
-      get the source code on GitHub : <a href="https://github.com/muricoca/recommendation-lectures">muricoca/recommendation-lectures</a>
+        &copy; Copyright 2012.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.0.7.
     </div>
-
-  </div>
-
-</body>
+  </body>
 </html>
